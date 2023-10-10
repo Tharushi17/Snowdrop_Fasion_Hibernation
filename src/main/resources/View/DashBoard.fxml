@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="dashBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="942.0" style="-fx-background-size: cover; -fx-background-image: url('img/x1.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoardController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.60000610351562" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="835.0" minWidth="10.0" prefWidth="835.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.79998779296875" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="217.79999389648438" minHeight="0.0" prefHeight="42.40000762939453" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="608.8" minHeight="10.0" prefHeight="575.1999633789062" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="73.60001220703123" minHeight="10.0" prefHeight="49.20003662109377" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <right>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.5999755859375" minWidth="0.0" prefWidth="94.80001831054688" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.800004196167" minWidth="10.0" prefWidth="188.8" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.800004196167" minWidth="10.0" prefWidth="424.8000244140625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.9999633789063" minWidth="4.0" prefWidth="127.99997558593748" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="184.4" minHeight="0.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="504.79999999999995" minHeight="10.0" prefHeight="504.79999999999995" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="106.60001220703128" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e2f6ca" height="90.0" stroke="#e2f6ca" strokeType="INSIDE" width="339.0" />
+                        <Label prefHeight="51.0" prefWidth="219.0" text="Snowdrop " GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e2f6ca" height="76.0" stroke="#e2f6ca" strokeType="INSIDE" width="75.0" />
+                        <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/img/icons8-snowdrop-64.png" />
+                           </image>
+                        </ImageView>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <center>
+                              <GridPane alignment="CENTER" opacity="0.93" prefHeight="489.0" prefWidth="336.0" style="-fx-background-color: #80847A;" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.5999755859375" minWidth="10.0" prefWidth="26.20001220703125" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.1999877929687" minWidth="10.0" prefWidth="283.1999877929687" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.60003662109375" minWidth="10.0" prefWidth="17.600012207031227" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="158.60001220703126" minHeight="0.0" prefHeight="77.6" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="373.59999389648436" minHeight="0.0" prefHeight="79.9999755859375" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="283.60004272460935" minHeight="10.0" prefHeight="90.4" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="438.3999969482422" minHeight="10.0" prefHeight="82.39999999999998" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="283.60004272460935" minHeight="10.0" prefHeight="80.79998779296875" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="283.60004272460935" minHeight="10.0" prefHeight="82.20003662109372" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXButton onAction="#btnItemForm" prefHeight="62.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Item" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnOrderDetailsForm" prefHeight="70.0" prefWidth="276.0" style="-fx-background-color: #183D3D;" text="Order Details" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnSupplierForm" prefHeight="74.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Supplier" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnEmployeeForm" prefHeight="69.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Employee" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnPlaceOrderForm" prefHeight="68.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Place Order" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnReportForm" prefHeight="67.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Reports" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="OCR A Extended" size="30.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </GridPane>
+                           </center>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <bottom>
+                              <JFXButton onAction="#btnLogOutOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #596275;" text="Log Out" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="OCR A Extended" size="25.0" />
+                                 </font>
+                              </JFXButton>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </right>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

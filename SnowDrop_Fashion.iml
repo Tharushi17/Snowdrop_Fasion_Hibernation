@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="SonarLintModuleSettings">
-    <facet type="hibernate" name="SnowDrop_Fashion"> <!-- Update the name attribute here -->
-          <configuration>
-            <datasource-map />
-            <naming-strategy-map />
-            <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
-          </configuration>
+    <facet type="hibernate" name="SnowDrop_Fashion">
+              <configuration>
+                <datasource-map />
+                <naming-strategy-map />
+                <deploymentDescriptor name="Snowdrop_Fashion.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/Snowdrop_Fashion.cfg.xml" />
+              </configuration>
     </facet>
   </component>
 </module>

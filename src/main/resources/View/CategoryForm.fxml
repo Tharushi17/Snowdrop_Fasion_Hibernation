@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="categoryForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="830.0" style="-fx-background-size: cover; -fx-background-image: url('img/x1.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CategoryController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.20001220703125" minWidth="0.0" prefWidth="47.00002212524414" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.1999778747559" minWidth="10.0" prefWidth="731.8000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.20001220703125" minWidth="10.0" prefWidth="51.799975585937545" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="205.8000244140625" minHeight="0.0" prefHeight="44.799993896484374" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="581.5999633789063" minHeight="10.0" prefHeight="554.4000061035156" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="71.60001220703123" minHeight="10.0" prefHeight="46.80002441406248" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane opacity="0.95" style="-fx-background-color: #aaa69d;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.39996337890625" minWidth="0.0" prefWidth="29.800006103515624" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.7999830245972" minWidth="10.0" prefWidth="673.7999938964844" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.39996337890625" minWidth="10.0" prefWidth="28.400048828125023" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="180.59998168945313" minHeight="8.799995994567873" prefHeight="18.39999179840088" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="180.59998168945313" minHeight="0.0" prefHeight="52.79999694824219" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="451.1999877929687" minHeight="10.0" prefHeight="220.8000030517578" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="451.1999877929687" minHeight="10.0" prefHeight="63.59998779296876" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="257.59999389648436" minHeight="10.0" prefHeight="222.80001220703122" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.39996337890625" minWidth="10.0" prefWidth="212.6" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.8000122070313" minWidth="10.0" prefWidth="262.0000366210938" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.8000122070313" minWidth="10.0" prefWidth="30.200048828124977" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.99998474121094" minWidth="10.0" prefWidth="181.399951171875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="85.79999389648438" minHeight="10.0" prefHeight="61.200018310546874" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="85.79999389648438" minHeight="10.0" prefHeight="61.200018310546874" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="149.8000129699707" minHeight="10.0" prefHeight="67.19997558593751" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="149.8000129699707" minHeight="10.0" prefHeight="42.4000244140625" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="183.0" text="Category ID:">
+                           <font>
+                              <Font name="Webdings" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="42.0" prefWidth="183.0" text="Gender :" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Webdings" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="42.0" prefWidth="183.0" text="Size :" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Webdings" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCategoryId" prefHeight="42.0" prefWidth="183.0" text="C0001" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Webdings" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtSize" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="tztGender" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXButton onAction="#btnAddOnAction" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: #ECEE81;" text="ADD" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Poor Richard" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#btnUpdateOnAction" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #82A0D8;" text="UPDATE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Poor Richard" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #FF7675;" text="DELETE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Poor Richard" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#btnClearOnAction" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #55EFC4;" text="CLEAR" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Poor Richard" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+                  <JFXTreeTableView fx:id="tblCategory" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <columns>
+                        <TreeTableColumn fx:id="colId" prefWidth="228.79999768733978" text="Category ID" />
+                        <TreeTableColumn fx:id="colSize" prefWidth="245.60003662109375" text="Size" />
+                        <TreeTableColumn fx:id="colGender" prefWidth="200.79995727539062" text="Gender" />
+                     </columns></JFXTreeTableView>
+                  <JFXTextField fx:id="txtSearch" text="search field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c2c54;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <Label prefHeight="42.0" prefWidth="309.0" style="-fx-background-color: #2c2c54;" text="Category Form" textFill="#fff5f5" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="OCR A Extended" size="30.0" />
+                           </font>
+                        </Label>
+                     </center>
+                     <left>
+                        <JFXButton onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #596275;" text="Back" textFill="#fff3f3" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Poor Richard" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </left>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
