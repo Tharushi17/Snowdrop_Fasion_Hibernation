@@ -31,16 +31,16 @@ public class Supplier {
 
 
 //-----------------------------------------------------
-//    @ManyToMany
-//    private List<Item> items;
-//
-//    public List<Item> getItems() {
-//        return items;
-//    }
-//
-//    public void setItems(List<Item> items) {
-//        this.items = items;
-//    }
+    @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL)
+    private List<Item> items;
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
 //----------------------------------------------------------
 
     public Supplier() {

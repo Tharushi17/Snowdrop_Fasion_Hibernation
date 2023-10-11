@@ -8,20 +8,40 @@ public class SupplierInvoice {
     private String invoiceId;
 
     private String date;
-    private String qty;
+    private int qty;
 
 
 //--------------------------------------------------
-    @ManyToOne
-    @JoinColumn(unique = true)
+    @OneToOne
+    @JoinColumn(name = "supplier_Id", referencedColumnName = "supplierId")
     private Supplier supplier;
 
+    public Supplier getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
+    }
 //---------------------------------------------------
+
+    @OneToOne
+    @JoinColumn(name = "category_Id")
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    //---------------------------------------------------
 
     public SupplierInvoice() {
     }
 
-    public SupplierInvoice(String invoiceId, String date, String qty) {
+    public SupplierInvoice(String invoiceId, String date, int qty) {
         this.invoiceId = invoiceId;
         this.date = date;
         this.qty = qty;
@@ -43,11 +63,11 @@ public class SupplierInvoice {
         this.date = date;
     }
 
-    public String getQty() {
+    public int getQty() {
         return qty;
     }
 
-    public void setQty(String qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
 

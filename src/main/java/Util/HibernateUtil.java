@@ -3,6 +3,7 @@ package Util;
 import Entity.Category;
 import Entity.Item;
 import Entity.Supplier;
+import Entity.SupplierInvoice;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -22,6 +23,7 @@ public class HibernateUtil {
         Metadata metadata = new MetadataSources(standardRegistry)
                 .addAnnotatedClass(Item.class)
                 .addAnnotatedClass(Supplier.class)
+                .addAnnotatedClass(SupplierInvoice.class)
                 .addAnnotatedClass(Category.class)
 
                 .getMetadataBuilder()
@@ -30,9 +32,10 @@ public class HibernateUtil {
 
         return metadata.getSessionFactoryBuilder()
                 .build();
-
-
     }
+
+
+
 
     public static Session getSession(){
         return sessionFactory.openSession();

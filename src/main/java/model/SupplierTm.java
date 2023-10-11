@@ -1,6 +1,5 @@
 package model;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 
 public class SupplierTm extends RecursiveTreeObject<SupplierTm> {

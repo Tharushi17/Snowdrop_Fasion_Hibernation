@@ -16,10 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -32,6 +29,7 @@ import org.hibernate.query.Query;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
@@ -62,8 +60,8 @@ public class CategoryController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colId.setCellValueFactory(new TreeItemPropertyValueFactory<>("categoryId"));
-        colGender.setCellValueFactory(new TreeItemPropertyValueFactory<>("gender"));
-        colSize.setCellValueFactory(new TreeItemPropertyValueFactory<>("size"));
+        colSize.setCellValueFactory(new TreeItemPropertyValueFactory<>("gender"));
+        colGender.setCellValueFactory(new TreeItemPropertyValueFactory<>("size"));
 
 
         tblCategory.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) ->{
@@ -145,13 +143,19 @@ public class CategoryController implements Initializable {
     void btnDeleteOnAction(ActionEvent event) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.find(Category.class, lblCategoryId.getText()));
-        transaction.commit();
-        session.close();
 
-        new Alert(Alert.AlertType.INFORMATION,"Supplier Deleted Successfully..").show();
-        clearFields();
-        loadTable();
+        Optional<ButtonType> btnType = new Alert(Alert.AlertType.CONFIRMATION,"Do you want to delete this Category and ASSOCIATED DATA ?", ButtonType.YES, ButtonType.NO).showAndWait();
+        if(btnType.get() == ButtonType.YES){
+            session.delete(session.find(Category.class, lblCategoryId.getText()));
+            transaction.commit();
+            session.close();
+
+            new Alert(Alert.AlertType.INFORMATION,"Category Deleted Successfully..").show();
+            loadTable();
+            clearFields();
+        }else {
+            new Alert(Alert.AlertType.INFORMATION,"Something Went Wrong..").show();
+        }
 
     }
 
@@ -208,13 +212,13 @@ public class CategoryController implements Initializable {
             String lastId = lastCategory.getCategoryId();
 
             if(lastId != null && !lastId.isEmpty()){
-                int num = Integer.parseInt(lastId.split("[C]")[1]);
+                int num = Integer.parseInt(lastId.split(("_"))[1]);
                 num++;
-                lblCategoryId.setText(String.format("C%04d",num));
+                lblCategoryId.setText(String.format("CAT_%04d",num));
 
             }
         }else{
-            lblCategoryId.setText("C0001");
+            lblCategoryId.setText("CAT_0001");
         }
     }
 

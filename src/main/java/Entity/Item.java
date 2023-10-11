@@ -10,50 +10,64 @@ public class Item {
     private String itemCode;
 
 
-
     private String description;
     private int stock;
     private double buyingPrice;
     private double sellingPrice;
     private double profit;
-    private String supplierId;
-    private String categoryId;
+    private String type;
 
 
 
 //------------------------------------------------------------------
-    @ManyToMany(mappedBy = "item")
+    @ManyToOne
     @JoinColumn(name = "supplierId")
-    private List<Supplier> suppliers;
+    private Supplier supplier;
 
-    public List<Supplier> getSuppliers() {
-        return suppliers;
+    public Supplier getSupplier() {
+        return supplier;
     }
 
-    public void setSuppliers(List<Supplier> suppliers) {
-        this.suppliers = suppliers;
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
     }
+
 //-----------------------------------------------------------------------
 
 
 //-----------------------------------------------------------
-//    @ManyToOne
-//    @JoinColumn(name = "category_ID")
-//    private Category category;
-//------------------------------------------------------------
+    @ManyToOne
+    @JoinColumn(name = "category_ID")
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    //------------------------------------------------------------
 
     public Item() {
     }
 
-    public Item(String itemCode, String description, int stock, double buyingPrice, double sellingPrice, double profit, String supplierId, String categoryId) {
+    public Item(String itemCode, String description, int stock, double buyingPrice, double sellingPrice, double profit, String type) {
         this.itemCode = itemCode;
         this.description = description;
         this.stock = stock;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
         this.profit = profit;
-        this.supplierId = supplierId;
-        this.categoryId = categoryId;
+        //this.categoryId = categoryId;
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getItemCode() {
@@ -104,21 +118,6 @@ public class Item {
         this.profit = profit;
     }
 
-    public String getSupplierId() {
-        return supplierId;
-    }
-
-    public void setSupplierId(String supplierId) {
-        this.supplierId = supplierId;
-    }
-
-    public String getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-    }
 
     @Override
     public String toString() {
@@ -129,8 +128,7 @@ public class Item {
                 ", buyingPrice=" + buyingPrice +
                 ", sellingPrice=" + sellingPrice +
                 ", profit=" + profit +
-                ", supplierId='" + supplierId + '\'' +
-                ", categoryId='" + categoryId + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

@@ -1,10 +1,15 @@
 package Entity;
 
+import lombok.NoArgsConstructor;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
+@NoArgsConstructor
 public class Category {
 
     @Id
@@ -16,17 +21,17 @@ public class Category {
 
 
 //---------------------------------------------------------
-//    @OneToMany
-//    private Item item;
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Item> items;
 
 //---------------------------------------------------------
-    public Category() {
-    }
+
     public Category(String categoryId, String size, String gender) {
         this.categoryId = categoryId;
         this.size = size;
         this.gender = gender;
     }
+
 
     public String getCategoryId() {
         return categoryId;

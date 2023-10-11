@@ -15,10 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -30,6 +27,7 @@ import org.hibernate.query.Query;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
@@ -163,16 +161,21 @@ public class SupplierController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.find(Supplier.class, lblCode.getText()));
-        transaction.commit();
-        session.close();
 
-        new Alert(Alert.AlertType.INFORMATION,"Supplier Deleted Successfully..").show();
-        loadTable();
-        clearFields();
+        Optional<ButtonType> btnType = new Alert(Alert.AlertType.CONFIRMATION,"Do you want to delete this Supplier and ASSOCIATED DATA ?", ButtonType.YES, ButtonType.NO).showAndWait();
+        if(btnType.get() == ButtonType.YES){
+            session.delete(session.find(Supplier.class, lblCode.getText()));
+            transaction.commit();
+            session.close();
+
+            new Alert(Alert.AlertType.INFORMATION,"Supplier Deleted Successfully..").show();
+            loadTable();
+            clearFields();
+        }else {
+            new Alert(Alert.AlertType.INFORMATION,"Something Went Wrong..").show();
+        }
 
     }
 
@@ -209,13 +212,13 @@ public class SupplierController implements Initializable {
             String lastId = lastSupplier.getSupplierId();
 
             if(lastId != null && !lastId.isEmpty()){
-                int num = Integer.parseInt(lastId.split("[S]")[1]);
+                int num = Integer.parseInt(lastId.split(("_"))[1]);
                 num++;
-                lblCode.setText(String.format("S%04d",num));
+                lblCode.setText(String.format("SUP_%04d",num));
 
             }
         }else{
-            lblCode.setText("S0001");
+            lblCode.setText("SUP_0001");
         }
     }
 

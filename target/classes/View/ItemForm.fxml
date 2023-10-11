@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -103,13 +104,13 @@
                                           <Font name="Century" size="22.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="cmbSupId" prefHeight="34.0" prefWidth="164.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                     <Label prefHeight="35.0" prefWidth="147.0" text="Add Qty :" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Century" size="22.0" />
                                        </font>
                                     </Label>
                                     <JFXTextField fx:id="txtCode" GridPane.columnIndex="2" />
+                                    <JFXComboBox fx:id="cmbSup" prefHeight="30.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                  </children>
                               </GridPane>
                               <GridPane prefHeight="283.0" prefWidth="458.0" GridPane.columnIndex="3">
@@ -133,7 +134,7 @@
                                           <Font name="Century" size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="35.0" prefWidth="147.0" text="Category :" GridPane.rowIndex="2">
+                                    <Label prefHeight="35.0" prefWidth="147.0" text="Category ID:" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Century" size="20.0" />
                                        </font>
@@ -143,7 +144,7 @@
                                           <Font name="Century" size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="35.0" prefWidth="147.0" text="Size :" GridPane.rowIndex="3">
+                                    <Label prefHeight="35.0" prefWidth="147.0" text="Type :" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Century" size="20.0" />
                                        </font>
@@ -175,8 +176,6 @@
                                           <Font name="Century" size="22.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="cmbCategory" prefHeight="34.0" prefWidth="164.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <ComboBox fx:id="cmbSize" prefHeight="34.0" prefWidth="164.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                     <Label fx:id="lblProfit" prefHeight="35.0" prefWidth="147.0" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Century" size="22.0" />
@@ -187,11 +186,24 @@
                                           <Font name="Poor Richard" size="17.0" />
                                        </font>
                                     </JFXButton>
+                                    <JFXComboBox fx:id="cmbCategory" prefHeight="30.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <JFXComboBox fx:id="cmbSize" prefHeight="30.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                  </children>
                               </GridPane>
                            </children>
                         </GridPane>
-                        <JFXTreeTableView prefHeight="204.0" prefWidth="950.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTreeTableView fx:id="tblItem" prefHeight="204.0" prefWidth="950.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <columns>
+                              <TreeTableColumn fx:id="colCode" prefWidth="75.0" text="Item Code" />
+                              <TreeTableColumn fx:id="colDesc" prefWidth="113.5999755859375" text="Description" />
+                              <TreeTableColumn fx:id="colSupId" prefWidth="104.80006408691406" text="Supplier ID" />
+                              <TreeTableColumn fx:id="colStock" prefWidth="79.99996948242188" text="Stock" />
+                              <TreeTableColumn fx:id="colBuying" prefWidth="111.20001220703125" text="Buying price" />
+                              <TreeTableColumn fx:id="colSelling" prefWidth="128.79998779296875" text="Selling Price" />
+                              <TreeTableColumn fx:id="colCategory" prefWidth="102.4000244140625" text="Category ID" />
+                              <TreeTableColumn fx:id="colType" prefWidth="116.800048828125" text="Type" />
+                              <TreeTableColumn fx:id="colProfit" prefWidth="140.00018310546875" text="Profit" />
+                           </columns></JFXTreeTableView>
                         <JFXTextField fx:id="txtSearch" prefHeight="30.0" prefWidth="503.0" text="search" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #183D3D;" GridPane.columnIndex="1">
                            <center>
@@ -202,7 +214,10 @@
                               </Label>
                            </center>
                            <right>
-                              <Label fx:id="lblDate" alignment="CENTER" prefHeight="52.0" prefWidth="199.0" text="Date" textFill="#e9ec96" BorderPane.alignment="CENTER" />
+                              <Label fx:id="lblDate" alignment="CENTER" prefHeight="52.0" prefWidth="199.0" text="Date" textFill="#e9ec96" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Ink Free" size="19.0" />
+                                 </font></Label>
                            </right>
                            <left>
                               <JFXButton onAction="#btnBackOnAction" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #1289A7;" text="Back" textFill="#fffbfb" BorderPane.alignment="CENTER" />
