@@ -7,14 +7,19 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.mindrot.jbcrypt.BCrypt;
 import com.jfoenix.controls.JFXPasswordField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -27,6 +32,7 @@ public class UserController implements Initializable {
     public JFXComboBox cmbUserType;
     public JFXTextField txtAdminEmail;
     public JFXPasswordField txtAdminPassword;
+    public BorderPane userForm;
     @FXML
     private JFXPasswordField txtConfirm;
 
@@ -195,7 +201,14 @@ public class UserController implements Initializable {
 
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) userForm.getScene().getWindow();
 
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/LoginForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
 

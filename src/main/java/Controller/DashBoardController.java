@@ -1,5 +1,6 @@
 package Controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,12 +15,22 @@ import java.util.ResourceBundle;
 public class DashBoardController implements Initializable {
 
     public BorderPane dashBoard;
+    public JFXButton btnEmployee;
+    public JFXButton btnReports;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    }
+        String email = LoginController.getEmail();
 
+        if(LoginController.getUserType(email).equals("Default")){
+            btnEmployee.setDisable(true);
+            btnReports.setDisable(true);
+        }else{
+            btnEmployee.setDisable(false);
+            btnReports.setDisable(false);
+        }
+    }
 
 
     public void btnItemForm(ActionEvent actionEvent) {
@@ -63,6 +74,14 @@ public class DashBoardController implements Initializable {
 
     public void btnLogOutOnAction(ActionEvent actionEvent) {
 
+        Stage stage = (Stage) dashBoard.getScene().getWindow();
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/LoginForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
 

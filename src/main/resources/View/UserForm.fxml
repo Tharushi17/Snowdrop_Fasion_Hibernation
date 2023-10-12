@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="894.0" style="-fx-background-image: url('img/fashion-store.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserController">
+<BorderPane fx:id="userForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="894.0" style="-fx-background-image: url('img/fashion-store.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserController">
    <top>
       <GridPane prefHeight="726.0" prefWidth="894.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -30,7 +30,7 @@
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <center>
-                  <GridPane opacity="0.85" style="-fx-background-color: #93B1A6;" BorderPane.alignment="CENTER">
+                  <GridPane opacity="0.94" style="-fx-background-color: #b2bec3;" BorderPane.alignment="CENTER">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.79998779296875" minWidth="0.0" prefWidth="38.99997329711914" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="695.9999877929688" />
@@ -128,7 +128,7 @@
                                     <Image url="@../img/icons8-snowdrop-64.png" />
                                  </image>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="56.0" prefWidth="559.0" style="-fx-background-color: #006266;" text="User Form" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label alignment="CENTER" prefHeight="56.0" prefWidth="559.0" style="-fx-background-color: #2d3436;" text="User Form" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Harrington" size="34.0" />
                                  </font>

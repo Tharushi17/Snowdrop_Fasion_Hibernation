@@ -84,7 +84,7 @@
                                           <Font name="OCR A Extended" size="30.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton onAction="#btnEmployeeForm" prefHeight="69.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Employee" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <JFXButton fx:id="btnEmployee" onAction="#btnEmployeeForm" prefHeight="69.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Employee" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="OCR A Extended" size="30.0" />
                                        </font>
@@ -94,7 +94,7 @@
                                           <Font name="OCR A Extended" size="30.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton onAction="#btnReportForm" prefHeight="67.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Reports" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <JFXButton fx:id="btnReports" onAction="#btnReportForm" prefHeight="67.0" prefWidth="258.0" style="-fx-background-color: #183D3D;" text="Reports" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="OCR A Extended" size="30.0" />
                                        </font>
