@@ -39,6 +39,11 @@
             <version>6.20.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>de.svenkubiak</groupId>
+            <artifactId>jBCrypt</artifactId>
+            <version>0.4.1</version>
+        </dependency>
 
     </dependencies>
 

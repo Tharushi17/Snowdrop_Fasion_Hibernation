@@ -14,7 +14,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        URL resourse = getClass().getResource("View/DashBoard.fxml");
+        URL resourse = getClass().getResource("View/UserForm.fxml");
         Parent load = FXMLLoader.load(resourse);
         Scene scene = new Scene(load);
         stage.setScene(scene);

@@ -1,6 +1,4 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 D
 SnowDrop_Fashion.iml,b\e\bec7b64253fc75239a3c97f72f8cd90f21e9ddaa
 V

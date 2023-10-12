@@ -394,9 +394,9 @@ public class ItemController implements Initializable {
 
 
 //------------ combo box ------------------------------
-private void setType() {
-    cmbSize.getItems().setAll("Adults", "Kids");
-}
+    private void setType() {
+        cmbSize.getItems().setAll("Adults", "Kids");
+    }
 
     private void setCategoryId() {
         Session session = HibernateUtil.getSession();

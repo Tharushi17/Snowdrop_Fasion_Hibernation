@@ -1,9 +1,6 @@
 package Util;
 
-import Entity.Category;
-import Entity.Item;
-import Entity.Supplier;
-import Entity.SupplierInvoice;
+import Entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -25,6 +22,7 @@ public class HibernateUtil {
                 .addAnnotatedClass(Supplier.class)
                 .addAnnotatedClass(SupplierInvoice.class)
                 .addAnnotatedClass(Category.class)
+                .addAnnotatedClass(User.class)
 
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
