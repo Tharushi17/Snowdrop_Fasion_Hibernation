@@ -36,7 +36,7 @@ public class SupplierInvoice {
     public void setCategory(Category category) {
         this.category = category;
     }
-    //---------------------------------------------------
+//---------------------------------------------------
 
     public SupplierInvoice() {
     }

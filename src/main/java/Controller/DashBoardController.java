@@ -61,7 +61,14 @@ public class DashBoardController implements Initializable {
     }
 
     public void btnEmployeeForm(ActionEvent actionEvent) {
+        Stage stage = (Stage) dashBoard.getScene().getWindow();
 
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/EmployeeForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
     public void btnPlaceOrderForm(ActionEvent actionEvent) {

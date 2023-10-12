@@ -128,7 +128,7 @@ public class SupplierController implements Initializable {
     void btnAddOnAction(ActionEvent event) {
 
         if(!checkValidity()){
-            new Alert(Alert.AlertType.INFORMATION,"Invalid Contact..").show();
+            new Alert(Alert.AlertType.ERROR,"Invalid Contact..").show();
 
         }else{
             Supplier supplier = new Supplier(
@@ -174,7 +174,7 @@ public class SupplierController implements Initializable {
             loadTable();
             clearFields();
         }else {
-            new Alert(Alert.AlertType.INFORMATION,"Something Went Wrong..").show();
+            new Alert(Alert.AlertType.ERROR,"Something Went Wrong..").show();
         }
 
     }
@@ -185,18 +185,23 @@ public class SupplierController implements Initializable {
         Session session = HibernateUtil.getSession();
         Supplier supplier = session.find(Supplier.class, lblCode.getText());
 
-        supplier.setSupplierId(lblCode.getText());
-        supplier.setSupplierName(txtSupName.getText());
-        supplier.setContact(txtContact.getText());
-        supplier.setComapny(txtCompany.getText());
+        if(checkValidity()){
+            supplier.setSupplierId(lblCode.getText());
+            supplier.setSupplierName(txtSupName.getText());
+            supplier.setContact(txtContact.getText());
+            supplier.setComapny(txtCompany.getText());
 
-        Transaction transaction = session.beginTransaction();
-        session.save(supplier);
-        transaction.commit();
-        session.close();
+            Transaction transaction = session.beginTransaction();
+            session.save(supplier);
+            transaction.commit();
+            session.close();
 
-        loadTable();
-        clearFields();
+            loadTable();
+            clearFields();
+            new Alert(Alert.AlertType.INFORMATION,"Supplier updated Successfully..").show();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Please Enter valid contact Number..").show();
+        }
     }
 
     private void generateId() {
