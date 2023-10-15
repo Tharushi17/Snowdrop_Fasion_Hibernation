@@ -1,0 +1,28 @@
+
+Q
+java:S3740("/Provide the parametrized type for this generic.(œÂùÿÿÿÿ8…•û±1
+Q
+java:S3740)"/Provide the parametrized type for this generic.(Ø“Ú²ÿÿÿÿÿ8…•û±1
+L
+java:S3740*"/Provide the parametrized type for this generic.(ãÛêš8…•û±1
+R
+java:S3740Í"/Provide the parametrized type for this generic.(½»­ıÿÿÿÿ8†•û±1
+D
+java:S1604O"(Make this anonymous inner class a lambda(’İ±H8‡•û±1
+J
+java:S1604L"(Make this anonymous inner class a lambda(Î™êÿşÿÿÿÿ8‡•û±1
+t
+java:S1104'"WMake tblCategory a static final constant or non-public and provide accessors if needed.(²ªÄú8‡•û±1
+s
+java:S1104("QMake colId a static final constant or non-public and provide accessors if needed.(œÂùÿÿÿÿ8‡•û±1
+u
+java:S1104)"SMake colSize a static final constant or non-public and provide accessors if needed.(Ø“Ú²ÿÿÿÿÿ8‡•û±1
+r
+java:S1104*"UMake colGender a static final constant or non-public and provide accessors if needed.(ãÛêš8‡•û±1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8‰•û±1
+q
+java:S3655”"NCall "btnType.isPresent()" or "!btnType.isEmpty()" before accessing the value.(ÕÇ”Œşÿÿÿÿ8À•û±1
+N
+java:S1128",Remove this unused import 'Entity.Supplier'.(øÃ±Ùşÿÿÿÿ8Ü•û±1
+O
+java:S1128"-Remove this unused import 'model.SupplierTm'.(©¤Ì£úÿÿÿÿ8Ü•û±1

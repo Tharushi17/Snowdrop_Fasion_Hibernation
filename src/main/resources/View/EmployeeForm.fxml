@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="employeeForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="981.0" style="-fx-background-image: url('img/x1.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeeController">
+<BorderPane fx:id="employeeForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" prefHeight="742.0" prefWidth="981.0" style="-fx-background-image: url('img/x1.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeeController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -25,7 +25,7 @@
           <RowConstraints maxHeight="74.79996337890623" minHeight="10.0" prefHeight="41.60001220703123" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane opacity="0.95" style="-fx-background-color: FDF0F0;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane opacity="0.91" style="-fx-background-color: FDF0F0;" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.4000244140625" minWidth="0.0" prefWidth="31.19998779296875" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="795.4" minWidth="10.0" prefWidth="776.8000122070313" />

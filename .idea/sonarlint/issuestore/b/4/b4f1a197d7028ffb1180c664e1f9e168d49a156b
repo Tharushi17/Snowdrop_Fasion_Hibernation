@@ -1,0 +1,22 @@
+
+r
+java:S1104"UMake dashBoard a static final constant or non-public and provide accessors if needed.(éßµÛ8œí§“²1
+y
+java:S1104"WMake btnEmployee a static final constant or non-public and provide accessors if needed.(´øèÎşÿÿÿÿ8œí§“²1
+s
+java:S1104"VMake btnReports a static final constant or non-public and provide accessors if needed.(–ÒØö8œí§“²1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8í§“²1
+£
+java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯şñ²üÿÿÿÿ8¢í§“²1
+£
+java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¹£Éúÿÿÿÿ8¢í§“²1
+O
+java:S1172$"2Remove this unused method parameter "actionEvent".(²üÔò8¤í§“²1
+T
+java:S11723"2Remove this unused method parameter "actionEvent".(Ë”’óıÿÿÿÿ8«í§“²1
+O
+java:S1172?"2Remove this unused method parameter "actionEvent".(†ê£µ8¬í§“²1
+T
+java:S1172J"2Remove this unused method parameter "actionEvent".(ãößºùÿÿÿÿ8Ä°«²1
+O
+java:S1172Y"2Remove this unused method parameter "actionEvent".(Ù³¶­8ïÑô´²1

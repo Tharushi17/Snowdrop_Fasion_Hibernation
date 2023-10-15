@@ -24,6 +24,13 @@ public class Item {
     @JoinColumn(name = "supplierId")
     private Supplier supplier;
 
+    public Item(String itemCode, String description, double sellingP, int stock) {
+        this.itemCode = itemCode;
+        this.description = description;
+        this.sellingPrice = sellingP;
+        this.stock = stock;
+    }
+
     public Supplier getSupplier() {
         return supplier;
     }
@@ -48,6 +55,14 @@ public class Item {
         this.category = category;
     }
 //------------------------------------------------------------
+
+
+//----------------------------------------------------------
+    @OneToMany(mappedBy = "item")
+    private List<OrderDetails> orderDetails;
+
+//----------------------------------------------------------
+
 
     public Item() {
     }

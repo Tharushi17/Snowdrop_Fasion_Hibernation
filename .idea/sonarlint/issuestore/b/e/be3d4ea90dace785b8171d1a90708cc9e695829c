@@ -1,0 +1,15 @@
+
+Q
+java:S3740s"/Provide the parametrized type for this generic.(èÌ„úÿÿÿÿ8ã®ñ¨²1
+t
+java:S1104"RMake txtOtp a static final constant or non-public and provide accessors if needed.(÷€ƒµüÿÿÿÿ8ä®ñ¨²1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8å®ñ¨²1
+]	java:S1254"<This block of commented-out lines of code should be removed.(è¢Œèşÿÿÿÿ8¯ñ¨²1
+O
+java:S1481@"2Remove this unused "smtHostServer" local variable.(‡éí“8‚¯ñ¨²1
+:
+java:S2119D"Save and re-use this "Random".(¼İÅf8ƒ¯ñ¨²1
+O
+java:S1144?"2Remove this unused private "sendOTPtoMail" method.(ŞØô¹8Œ¯ñ¨²1
+R
+java:S1144C"0Remove this unused private "generateOTP" method.(şµÆ‰şÿÿÿÿ8Œ¯ñ¨²1
