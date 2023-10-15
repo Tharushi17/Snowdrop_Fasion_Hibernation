@@ -18,6 +18,7 @@ public class Orders {
     private double arrears;
 
 
+//------------------------------------------------------
     @ManyToOne
     @JoinColumn(name = "employeeId")
     private Employee employee;
@@ -31,6 +32,8 @@ public class Orders {
     }
 
 
+
+//------------------------------------------------------------
 
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private List<OrderDetails> details;

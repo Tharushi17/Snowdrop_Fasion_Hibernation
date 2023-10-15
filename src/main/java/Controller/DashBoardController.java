@@ -45,7 +45,14 @@ public class DashBoardController implements Initializable {
     }
 
     public void btnOrderDetailsForm(ActionEvent actionEvent) {
+        Stage stage = (Stage) dashBoard.getScene().getWindow();
 
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/OrderDetailForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
     public void btnSupplierForm(ActionEvent actionEvent) {

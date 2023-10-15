@@ -230,7 +230,6 @@
                               <Font name="Poor Richard" size="17.0" />
                            </font>
                         </JFXButton>
-                        <JFXTextField fx:id="txtSearch" text="search " />
                      </children>
                   </GridPane>
                   <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">

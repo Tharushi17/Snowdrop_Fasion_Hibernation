@@ -68,7 +68,7 @@ public class OrderDetails {
         this.orderQty = orderQty;
     }
 
-    public double getDiscountRate(double disRate) {
+    public double getDiscountRate() {
         return discountRate;
     }
 

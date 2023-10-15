@@ -1,8 +1,6 @@
 
 V
 &src/main/resources/View/DashBoard.fxml,4\7\47ee9aa767396cb3cc6d34bb7308ea15d63e812f
-S
-#src/main/java/model/SupplierTm.java,1\9\1921bc00088d9b7d64d37f6f6e6f15707581221e
 O
 src/main/java/model/ItemTm.java,4\5\4500d59984679a09499a526d76551c788a071a35
 g
@@ -19,19 +17,9 @@ Y
 )src/main/java/Entity/SupplierInvoice.java,e\e\ee00ce2b31c013f354a18a5cd231e5136eb2dbe8
 Q
 !src/main/java/AppInitializer.java,d\8\d8724d5ff68b00b1e87def6fac487d03194f989f
-\
-,src/main/java/Controller/UserController.java,b\0\b0b06aa4eff4d3f0c8113cd804dfd71f304df19f
 f
 6src/main/java/Controller/ForgotPasswordController.java,b\e\be3d4ea90dace785b8171d1a90708cc9e695829c
 S
 #src/main/java/model/EmployeeTm.java,e\a\ea90c39b0f7fb1f96476c3edd5203e4cf309f5c9
-`
-0src/main/java/Controller/SupplierController.java,6\a\6a6a74475a8e65e76d816215127eb0642c33c006
-R
-"src/main/java/Entity/Supplier.java,0\f\0fd9da0ec64e21e3c1ffa043b3bc088e654c557c
-a
-1src/main/java/Controller/DashBoardController.java,b\4\b4f1a197d7028ffb1180c664e1f9e168d49a156b
-`
-0src/main/java/Controller/EmployeeController.java,6\2\62bf2b4eb88b18808b4854b84a525ce48b54dbf5
 S
 #src/main/java/model/CategoryTm.java,4\d\4d8e22646aacd857c54e54fb6b95b40620971059

@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static javafx.scene.paint.Color.rgb;
 
@@ -244,60 +246,72 @@ public class PlaceOrderController implements Initializable {
         double sellingP = Double.parseDouble(txtSellingP.getText());
         double disRate = Double.parseDouble(txtDisRate.getText());
 
+
         int totalQty = 0;
 
-        for (CartTm tm:tblList) {
+        if(emailFormat()){
+            if(validContact()){
 
-            if(tm.getItemCode().equals(cmbItemCode.getValue().toString())){
-                totalQty += tm.getQty();
+                for (CartTm tm:tblList) {
+                    if(tm.getItemCode().equals(cmbItemCode.getValue().toString())){
 
-                tm.setQty(tm.getQty()+qty);
-                tm.setTotal((tm.getQty()*sellingP));
-                tm.setDiscount((unitP*tm.getQty())*disRate/100);
-                isExist = true;
+                        totalQty += tm.getQty();
+                        tm.setQty(tm.getQty()+qty);
+                        tm.setTotal((tm.getQty()*sellingP));
+                        tm.setDiscount((unitP*tm.getQty())*disRate/100);
+                        isExist = true;
+                    }
+                }
+
+                if (totalQty+qty > Integer.parseInt(llblStock.getText())){
+                    new Alert(Alert.AlertType.ERROR,"Insufficient Stock...").show();
+                    clearItemDetails();
+                    return;
+                }
+
+
+                if(!isExist && !txtQty.getText().isEmpty()){
+                    JFXButton btn = new JFXButton("Delete");
+                    btn.setTextFill(rgb(4,4,4));
+                    btn.setStyle("-fx-font-weight: BOLD");
+
+                    CartTm cartTm = new CartTm(
+                            lblId.getText(),
+                            cmbEmpId.getValue(),
+                            txtCustName.getText(),
+                            cmbItemCode.getValue(),
+                            unitP,
+                            sellingP,
+                            qty,
+                            (unitP*qty)*disRate/100,
+                            disRate,
+                            Double.parseDouble(txtSellingP.getText())*Integer.parseInt(txtQty.getText()),
+                            btn
+                    );
+
+
+                    btn.setOnAction(actionEvent -> {
+                        tblList.remove(cartTm);
+                        lblTotal.setText(String.format("%.2f", findTotal()));
+                        lblTotalDis.setText(String.format("%.2f", findTotalDiscount()));
+                        updateStockOnItemRemoval(cmbItemCode.getValue(), qty);
+                        tblCart.refresh();
+                    });
+
+                    tblList.add(cartTm);
+
+                    TreeItem<CartTm> treeItem = new RecursiveTreeItem<>(tblList, RecursiveTreeObject::getChildren);
+                    tblCart.setRoot(treeItem);
+                    tblCart.setShowRoot(false);
+                }
+
+            }else{
+                new Alert(Alert.AlertType.ERROR,"Please Enter a valid Contact Number...").show();
             }
+        }else{
+             new Alert(Alert.AlertType.ERROR,"Please Enter a valid Email...").show();
         }
 
-        if (totalQty+qty > Integer.parseInt(llblStock.getText())){
-            new Alert(Alert.AlertType.ERROR,"Insufficient Stock...").show();
-            clearItemDetails();
-            return;
-
-        }
-
-        if(!isExist && !txtQty.getText().isEmpty()){
-            JFXButton btn = new JFXButton("Delete");
-            btn.setTextFill(rgb(4,4,4));
-            btn.setStyle("-fx-font-weight: BOLD");
-
-            CartTm cartTm = new CartTm(
-                    lblId.getText(),
-                    cmbEmpId.getValue(),
-                    txtCustName.getText(),
-                    cmbItemCode.getValue(),
-                    unitP,
-                    sellingP,
-                    qty,
-                    (unitP*qty)*disRate/100,
-                    disRate,
-                    Double.parseDouble(txtSellingP.getText())*Integer.parseInt(txtQty.getText()),
-                    btn
-            );
-
-            btn.setOnAction(actionEvent -> {
-                tblList.remove(cartTm);
-                lblTotal.setText(String.format("%.2f", findTotal()));
-                lblTotalDis.setText(String.format("%.2f", findTotalDiscount()));
-                updateStockOnItemRemoval(cmbItemCode.getValue(), qty);
-                tblCart.refresh();
-            });
-
-            tblList.add(cartTm);
-
-            TreeItem<CartTm> treeItem = new RecursiveTreeItem<>(tblList, RecursiveTreeObject::getChildren);
-            tblCart.setRoot(treeItem);
-            tblCart.setShowRoot(false);
-        }
 
         lblTotal.setText(String.format("%.2f", findTotal()));
         lblTotalDis.setText(String.format("%.2f", findTotalDiscount()));
@@ -323,7 +337,6 @@ public class PlaceOrderController implements Initializable {
 
             String selectedItemCode = cmbItemCode.getValue();
             Item selectedItem = getItemCode(selectedItemCode);
-
 
             Orders order = new Orders(
                     lblId.getText(),
@@ -357,18 +370,23 @@ public class PlaceOrderController implements Initializable {
                 detailsList.add(orderDetails);
             }
 
-            session.save(order);
+            //session.getTransaction().commit();
 
-            for (OrderDetails detail : detailsList) {
-                session.save(detail);
+            if(txtCash.getText().isEmpty()){
+                new Alert(Alert.AlertType.ERROR,"Enter the cash before place order...").show();
+            }else{
+                session.save(order);
+
+                for (OrderDetails detail : detailsList) {
+                    session.save(detail);
+                }
+
+                transaction.commit();
+                new Alert(Alert.AlertType.INFORMATION,"Order is placed Successfully...").show();
+                clearFields();
+                tblCart.refresh();
             }
 
-            //session.getTransaction().commit();
-            transaction.commit();
-            new Alert(Alert.AlertType.INFORMATION,"Order is placed Successfully...").show();
-
-            clearFields();
-            tblCart.refresh();
 
         }catch (Exception e){
             if(transaction != null){
@@ -383,18 +401,23 @@ public class PlaceOrderController implements Initializable {
 
 
 
+    private boolean emailFormat(){
+        String emailAddress = txtCustEmail.getText();
+        String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
 
-    @FXML
-    void btnBackOnAction(ActionEvent event) {
-        Stage stage = (Stage) placeOrderForm.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/DashBoard.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        Pattern pattern = Pattern.compile(regexPattern);
+        Matcher matcher = pattern.matcher(emailAddress);
+
+        return matcher.matches();
     }
 
+    boolean validContact(){
+        if(txtCustContact.getText().length() != 10 || txtCustContact.getText().charAt(0) != '0'){
+            return false;
+        }
+        return true;
+    }
 
 
 //----------- set foreign key employee id in table -----------------
@@ -415,17 +438,6 @@ public class PlaceOrderController implements Initializable {
         try{
             Item item = session.get(Item.class, itemCode);
             return item;
-        }finally {
-            session.close();
-        }
-    }
-
-    private Orders getOrderId(String orderId){
-        Session session = HibernateUtil.getSession();
-
-        try{
-            Orders order = session.get(Orders.class, orderId);
-            return order;
         }finally {
             session.close();
         }
@@ -615,5 +627,17 @@ public class PlaceOrderController implements Initializable {
         }
     }
 
+
+
+    @FXML
+    void btnBackOnAction(ActionEvent event) {
+        Stage stage = (Stage) placeOrderForm.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/DashBoard.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
 
 }
