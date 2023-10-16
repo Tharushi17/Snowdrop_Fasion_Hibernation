@@ -62,7 +62,15 @@ public class Item {
     private List<OrderDetails> orderDetails;
 
 //----------------------------------------------------------
+    @ManyToMany
+    @JoinTable(
+            name = "sales_return_details_item",
+            joinColumns = @JoinColumn(name = "return_detail_id"),
+            inverseJoinColumns = @JoinColumn(name = "item_code")
+    )
+    private List<Item> items;
 
+//------------------------------------------------------------
 
     public Item() {
     }

@@ -64,7 +64,7 @@
                         <TreeTableColumn fx:id="colDisRate" prefWidth="176.79998779296875" text="Discount Rate" />
                      </columns>
                   </JFXTreeTableView>
-                  <JFXTextField fx:id="txtSearch" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="txtSearch" text="search " GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #071952;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <center>
                         <Label alignment="CENTER" prefHeight="51.0" prefWidth="350.0" text="Order Details Form" textFill="#e7d5d5" BorderPane.alignment="CENTER">

@@ -1,9 +1,6 @@
 package Controller;
 
-import Entity.Employee;
-import Entity.Item;
-import Entity.OrderDetails;
-import Entity.Orders;
+import Entity.*;
 import Util.HibernateUtil;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
@@ -370,12 +367,23 @@ public class PlaceOrderController implements Initializable {
                 detailsList.add(orderDetails);
             }
 
-            //session.getTransaction().commit();
 
             if(txtCash.getText().isEmpty()){
                 new Alert(Alert.AlertType.ERROR,"Enter the cash before place order...").show();
             }else{
+
+                Payment payment = new Payment(
+                        generatePymentId(),
+                        lblDate.getText(),
+                        Double.parseDouble(lblTotal.getText()),
+                        Double.parseDouble(txtCash.getText()),
+                        Double.parseDouble(lblBalance.getText())
+                );
+                payment.setOrder(order);
+
+
                 session.save(order);
+                session.save(payment);
 
                 for (OrderDetails detail : detailsList) {
                     session.save(detail);
@@ -385,6 +393,8 @@ public class PlaceOrderController implements Initializable {
                 new Alert(Alert.AlertType.INFORMATION,"Order is placed Successfully...").show();
                 clearFields();
                 tblCart.refresh();
+
+                //print bill???????????????
             }
 
 
@@ -466,6 +476,30 @@ public class PlaceOrderController implements Initializable {
         }
     }
 
+
+    private String generatePymentId(){
+        Session session = HibernateUtil.getSession();
+        Query query = session.createQuery("FROM Payment ORDER BY paymentId DESC");
+        query.setMaxResults(1);
+
+        List<Payment> list = query.list();
+
+        if(!list.isEmpty()){
+            Payment lastPay = list.get(0);
+            String lastId = lastPay.getPaymentId();
+
+            if(!list.isEmpty()){
+
+
+                if(lastId != null && !lastId.isEmpty()) {
+                    int num = Integer.parseInt(lastId.split(("_"))[1]);
+                    num++;
+                    return (String.format("Pay_%04d", num));
+                }
+            }
+        }
+        return ("Pay_0001");
+    }
 
 
 //---------------- clear fields ------------------------

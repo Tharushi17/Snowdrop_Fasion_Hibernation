@@ -1,0 +1,12 @@
+
+Q
+java:S3740;"/Provide the parametrized type for this generic.(¦éðäüÿÿÿÿ8åýÃ“²1
+Q
+java:S3740S"/Provide the parametrized type for this generic.(¾Ï°×þÿÿÿÿ8åýÃ“²1
+r
+java:S1104"UMake loginForm a static final constant or non-public and provide accessors if needed.(¾ÚÜÐ8æýÃ“²1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8æýÃ“²1
+£
+java:S1186%"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘ÝŸüÿÿÿÿ8…þÃ“²1
+X
+java:S2696D"6Make the enclosing method "static" or remove this set.(¨ÒÜ¢ÿÿÿÿÿ8ƒºÈ“²1
