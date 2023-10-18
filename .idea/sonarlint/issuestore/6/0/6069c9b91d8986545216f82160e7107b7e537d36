@@ -1,37 +1,37 @@
 
 R
-java:S3740Ì"/Provide the parametrized type for this generic.(–•–‘ûÿÿÿÿ8¼Å¦¹³1
+java:S3740Í"/Provide the parametrized type for this generic.(–•–‘ûÿÿÿÿ8°Êİİ³1
 R
-java:S3740â"/Provide the parametrized type for this generic.(É‹ÿÿÿÿÿ8¼Å¦¹³1
+java:S3740ã"/Provide the parametrized type for this generic.(É‹ÿÿÿÿÿ8°Êİİ³1
 R
-java:S3740Ó"/Provide the parametrized type for this generic.(±ÆÊÊÿÿÿÿÿ8½Å¦¹³1
+java:S3740Ô"/Provide the parametrized type for this generic.(±ÆÊÊÿÿÿÿÿ8°Êİİ³1
 M
-java:S3740ó"/Provide the parametrized type for this generic.(Çÿ½ë8½Å¦¹³1
+java:S3740ô"/Provide the parametrized type for this generic.(Çÿ½ë8°Êİİ³1
 L
-java:S1066î"/Merge this if statement with the enclosing one.(ç„‹{8¾Å¦¹³1
+java:S1066ï"/Merge this if statement with the enclosing one.(ç„‹{8±Êİİ³1
 K
-java:S1604˜"(Make this anonymous inner class a lambda(º®°¬øÿÿÿÿ8¿Å¦¹³1
+java:S1604˜"(Make this anonymous inner class a lambda(º®°¬øÿÿÿÿ8²Êİİ³1
 K
-java:S1604¦"(Make this anonymous inner class a lambda(„“±ùúÿÿÿÿ8¿Å¦¹³1
+java:S1604§"(Make this anonymous inner class a lambda(„“±ùúÿÿÿÿ8²Êİİ³1
 ~
-java:S1488¶"`Immediately return this expression instead of assigning it to the temporary variable "employee".(À·ÃÑ8ÀÅ¦¹³1
+java:S1488·"`Immediately return this expression instead of assigning it to the temporary variable "employee".(À·ÃÑ8²Êİİ³1
 
-java:S1488Á"\Immediately return this expression instead of assigning it to the temporary variable "item".(ù²ªèÿÿÿÿÿ8ÀÅ¦¹³1
+java:S1488Â"\Immediately return this expression instead of assigning it to the temporary variable "item".(ù²ªèÿÿÿÿÿ8²Êİİ³1
 x
-java:S1104'"VMake lblEmpName a static final constant or non-public and provide accessors if needed.(øÃÄúÿÿÿÿ8ÀÅ¦¹³1
+java:S1104'"VMake lblEmpName a static final constant or non-public and provide accessors if needed.(øÃÄúÿÿÿÿ8³Êİİ³1
 w
-java:S1104("ZMake placeOrderForm a static final constant or non-public and provide accessors if needed.(™œÃ8ÀÅ¦¹³1
+java:S1104("ZMake placeOrderForm a static final constant or non-public and provide accessors if needed.(™œÃ8³Êİİ³1
 p
-java:S1104)"SMake txtCash a static final constant or non-public and provide accessors if needed.(ŒÅ€8ÀÅ¦¹³1
+java:S1104)"SMake txtCash a static final constant or non-public and provide accessors if needed.(ŒÅ€8³Êİİ³1
 y
-java:S1104*"WMake colDiscount a static final constant or non-public and provide accessors if needed.(Î¶îÿÿÿÿÿÿ8ÀÅ¦¹³1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8ÄÅ¦¹³1
-^	java:S125¶"<This block of commented-out lines of code should be removed.(Á²èŠıÿÿÿÿ8È¦¹³1
+java:S1104*"WMake colDiscount a static final constant or non-public and provide accessors if needed.(Î¶îÿÿÿÿÿÿ8³Êİİ³1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8µÊİİ³1
+^	java:S125¸"<This block of commented-out lines of code should be removed.(Á²èŠıÿÿÿÿ8çËİİ³1
 p
-java:S3776î"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(íÎ¾¹8”È¦¹³1
+java:S3776ğ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(íÎ¾¹8ëËİİ³1
 e
-java:S1858ı"B"getValue" returns a string, there's no need to call "toString()".(Èµìøÿÿÿÿ8˜È¦¹³1
+java:S1858ş"B"getValue" returns a string, there's no need to call "toString()".(Èµìøÿÿÿÿ8îËİİ³1
 j
-java:S5998 "LRefactor this repetition that can lead to a stack overflow for large inputs.(³°Ê´8°È¦¹³1
+java:S5998¡"LRefactor this repetition that can lead to a stack overflow for large inputs.(³°Ê´8üËİİ³1
 _
-java:S1126ª"AReplace this if-then-else statement by a single return statement.(øÒƒà8±È¦¹³1
+java:S1126«"AReplace this if-then-else statement by a single return statement.(øÒƒà8üËİİ³1

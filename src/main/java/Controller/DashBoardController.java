@@ -106,4 +106,14 @@ public class DashBoardController implements Initializable {
     }
 
 
+    public void btnSalesReturnForm(ActionEvent actionEvent) {
+        Stage stage = (Stage) dashBoard.getScene().getWindow();
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../View/SalesReturnForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
 }

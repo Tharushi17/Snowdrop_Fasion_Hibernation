@@ -294,7 +294,7 @@ public class ItemController implements Initializable {
 
         }catch (Exception e){
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR,"Error in Updating Iten...").show();
+            new Alert(Alert.AlertType.ERROR,"Error in Updating Item...").show();
 
         }finally {
             session.close();

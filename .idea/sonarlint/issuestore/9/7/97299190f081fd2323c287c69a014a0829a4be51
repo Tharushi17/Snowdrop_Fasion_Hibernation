@@ -1,0 +1,72 @@
+
+Q
+java:S3740,"/Provide the parametrized type for this generic.(·ŞŠÎúÿÿÿÿ8¶¬—†´1
+Q
+java:S3740-"/Provide the parametrized type for this generic.(Â¡™Şùÿÿÿÿ8·¬—†´1
+Q
+java:S3740."/Provide the parametrized type for this generic.(®Ô…ßúÿÿÿÿ8·¬—†´1
+Q
+java:S3740/"/Provide the parametrized type for this generic.(ı¼”öşÿÿÿÿ8·¬—†´1
+Q
+java:S37400"/Provide the parametrized type for this generic.(ê¦„÷üÿÿÿÿ8·¬—†´1
+Q
+java:S37401"/Provide the parametrized type for this generic.(ËÇ—èùÿÿÿÿ8·¬—†´1
+L
+java:S37402"/Provide the parametrized type for this generic.(èÁƒá8·¬—†´1
+L
+java:S37403"/Provide the parametrized type for this generic.(Ğ‘Ê©8·¬—†´1
+L
+java:S37404"/Provide the parametrized type for this generic.(™¼…ÿ8·¬—†´1
+L
+java:S3740v"/Provide the parametrized type for this generic.(·›ë¨8·¬—†´1
+M
+java:S3740‹"/Provide the parametrized type for this generic.(¤ßşâ8·¬—†´1
+L
+java:S3740¬"/Provide the parametrized type for this generic.(›–›8·¬—†´1
+R
+java:S3740Â"/Provide the parametrized type for this generic.(Éîƒüÿÿÿÿ8·¬—†´1
+M
+java:S3740Ñ"/Provide the parametrized type for this generic.(Ëá×¨8·¬—†´1
+M
+java:S3740æ"/Provide the parametrized type for this generic.(Ëá×¨8·¬—†´1
+e
+java:S1192a"HDefine a constant instead of duplicating this literal "orderId" 5 times.(ı²™¦8¸¬—†´1
+k
+java:S1192d"IDefine a constant instead of duplicating this literal "itemCode" 5 times.(öºÂ¿øÿÿÿÿ8¸¬—†´1
+x
+java:S1104)"VMake returnForm a static final constant or non-public and provide accessors if needed.(Õ¢ĞÃøÿÿÿÿ8¹¬—†´1
+y
+java:S1104*"WMake txtItemCode a static final constant or non-public and provide accessors if needed.(øÜÜ¡üÿÿÿÿ8·¬¥†´1
+y
+java:S1104+"WMake cmbItemCode a static final constant or non-public and provide accessors if needed.(ğèŒ…ÿÿÿÿÿ8¹¬—†´1
+y
+java:S1104,"WMake colReturnId a static final constant or non-public and provide accessors if needed.(·ŞŠÎúÿÿÿÿ8¹¬—†´1
+x
+java:S1104-"VMake colOrderId a static final constant or non-public and provide accessors if needed.(Â¡™Şùÿÿÿÿ8¹¬—†´1
+u
+java:S1104."SMake colDate a static final constant or non-public and provide accessors if needed.(®Ô…ßúÿÿÿÿ8¹¬—†´1
+y
+java:S1104/"WMake colCostName a static final constant or non-public and provide accessors if needed.(ı¼”öşÿÿÿÿ8¹¬—†´1
+w
+java:S11040"UMake colAmount a static final constant or non-public and provide accessors if needed.(ê¦„÷üÿÿÿÿ8¹¬—†´1
+y
+java:S11041"WMake colItemCode a static final constant or non-public and provide accessors if needed.(ËÇ—èùÿÿÿÿ8¹¬—†´1
+p
+java:S11042"SMake colDesc a static final constant or non-public and provide accessors if needed.(èÁƒá8¹¬—†´1
+r
+java:S11043"UMake colUPrice a static final constant or non-public and provide accessors if needed.(Ğ‘Ê©8¹¬—†´1
+o
+java:S11044"RMake colQty a static final constant or non-public and provide accessors if needed.(™¼…ÿ8¹¬—†´1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8»¬—†´1
+L
+java:S1481Ÿ".Remove this unused "itemCodes" local variable.(£‡¡é8ú¬—†´1
+`
+java:S1858µ"B"getValue" returns a string, there's no need to call "toString()".(Æ¦Ş›8û¬—†´1
+^	java:S125Î"<This block of commented-out lines of code should be removed.(‰½Ê’úÿÿÿÿ8ü¬—†´1
+`
+java:S1858‰"B"getValue" returns a string, there's no need to call "toString()".(Æ¦Ş›8ÿ¬—†´1
+[
+java:S1128
+">Remove this unused import 'javafx.beans.value.ChangeListener'.(¸÷Í8‰­—†´1
+\
+java:S1128"?Remove this unused import 'javafx.beans.value.ObservableValue'.(´œ«Å8‰­—†´1

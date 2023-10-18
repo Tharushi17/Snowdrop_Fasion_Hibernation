@@ -152,10 +152,11 @@ public class PlaceOrderController implements Initializable {
         txtDisRate.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                double unitPrice = Double.parseDouble(txtUnitPrice.getText());
-                double disRate = Double.parseDouble(txtDisRate.getText());
 
                 if(t1 != null){
+                    double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+                    double disRate = Double.parseDouble(txtDisRate.getText());
+
                     double sellingP = unitPrice-(unitPrice*disRate/100);
                     txtSellingP.setText(sellingP+"");
                 }
@@ -166,10 +167,11 @@ public class PlaceOrderController implements Initializable {
         txtCash.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                double total = Double.parseDouble(lblTotal.getText());
-                double cash = Double.parseDouble(txtCash.getText());
 
                 if(t1 != null){
+                    double total = Double.parseDouble(lblTotal.getText());
+                    double cash = Double.parseDouble(txtCash.getText());
+
                     double balance = total-cash;
                     lblBalance.setText(balance+"");
                 }
@@ -236,18 +238,17 @@ public class PlaceOrderController implements Initializable {
 //-------------------- Add to cart -----------------------
     @FXML
     void btnAddToCart(ActionEvent event) {
-        boolean isExist = false;
 
         int qty = Integer.parseInt(txtQty.getText());
         double unitP = Double.parseDouble(txtUnitPrice.getText());
         double sellingP = Double.parseDouble(txtSellingP.getText());
         double disRate = Double.parseDouble(txtDisRate.getText());
 
-
         int totalQty = 0;
 
         if(emailFormat()){
             if(validContact()){
+                boolean isExist = false;
 
                 for (CartTm tm:tblList) {
                     if(tm.getItemCode().equals(cmbItemCode.getValue().toString())){
@@ -332,9 +333,6 @@ public class PlaceOrderController implements Initializable {
             String selectedEmpId = cmbEmpId.getValue();
             Employee selectedEmp = getEmployeeId(selectedEmpId);
 
-            String selectedItemCode = cmbItemCode.getValue();
-            Item selectedItem = getItemCode(selectedItemCode);
-
             Orders order = new Orders(
                     lblId.getText(),
                     lblDate.getText(),
@@ -352,6 +350,9 @@ public class PlaceOrderController implements Initializable {
             List<OrderDetails> detailsList = new ArrayList<>();
 
             for (CartTm tm : tblList) {
+                String selectedItemCode = tm.getItemCode();
+                Item selectedItem = getItemCode(selectedItemCode);
+
                 OrderDetails orderDetails = new OrderDetails();
                 orderDetails.setOrders(order);
                 orderDetails.setItem(selectedItem);
@@ -532,7 +533,7 @@ public class PlaceOrderController implements Initializable {
         lblTotalDis.setText("0.0");
         lblTotal.setText("0.0");
         lblBalance.setText("0.0");
-        txtCash.clear();
+        txtCash.setText("0.0");
     }
 
 

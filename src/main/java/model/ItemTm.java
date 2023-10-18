@@ -1,7 +1,5 @@
 package model;
 
-import Entity.Category;
-import Entity.Supplier;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import lombok.*;
 

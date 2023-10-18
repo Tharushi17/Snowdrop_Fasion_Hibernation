@@ -1,6 +1,7 @@
 package Entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,15 @@ public class SalesReturnDetails {
     @JoinColumn(name = "returnId")
     private SalesReturn salesReturn;
 
-//-----------------------------------------
+    public SalesReturn getSalesReturn() {
+        return salesReturn;
+    }
+
+    public void setSalesReturn(SalesReturn salesReturn) {
+        this.salesReturn = salesReturn;
+    }
+    //-----------------------------------------
+
 
     @ManyToMany
     @JoinTable(
@@ -29,6 +38,9 @@ public class SalesReturnDetails {
             joinColumns = @JoinColumn(name = "return_detail_id"),
             inverseJoinColumns = @JoinColumn(name = "item_code")
     )
+
+
+
     private List<Item> items;
 
     public List<Item> getItems() {
@@ -42,7 +54,10 @@ public class SalesReturnDetails {
 //------------------------------------------
 
 
+//-----------------------------------------
+
     public SalesReturnDetails() {
+        this.items = new ArrayList<>();
     }
 
     public SalesReturnDetails(int qty, double unitPrice, double disRate, double amount) {

@@ -31,6 +31,9 @@ public class Payment {
     //--------------------------------------------------
 
 
+    public Payment() {
+    }
+
     public Payment(String paymentId, String date, double total, double cash, double balance) {
         this.paymentId = paymentId;
         this.date = date;

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="returnForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="942.0" style="-fx-background-size: cover; -fx-background-image: url('img/x1.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SalesReturnController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.5999755859375" minWidth="0.0" prefWidth="24.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="898.399951171875" minWidth="10.0" prefWidth="890.4" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.4000244140625" minWidth="0.0" prefWidth="19.600024414062545" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="221.4" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="694.4" minHeight="10.0" prefHeight="687.1999877929687" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="74.60001220703123" minHeight="0.19998779296872726" prefHeight="20.000012207031205" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane opacity="0.88" style="-fx-background-color: #D7C0AE;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.20001220703125" minWidth="0.0" prefWidth="17.799974632263183" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="860.800048828125" minWidth="10.0" prefWidth="850.999951171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.39996337890625" minWidth="0.0" prefWidth="23.000048828125045" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="208.60001220703126" minHeight="0.0" prefHeight="13.000004005432128" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.99997558593748" minHeight="0.0" prefHeight="60.99999599456787" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="615.6" minHeight="10.0" prefHeight="287.20000610351565" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="615.6" minHeight="9.600006103515625" prefHeight="15.200018310546852" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="615.6" minHeight="10.0" prefHeight="62.999981689453136" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="615.6" minHeight="10.0" prefHeight="233.39996337890625" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="615.6" minHeight="10.0" prefHeight="19.000036621093727" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.800048828125" minWidth="10.0" prefWidth="190.8000244140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.6000061035156" minWidth="10.0" prefWidth="218.60001220703128" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.6000061035156" minWidth="10.0" prefWidth="24.99998779296874" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.6000061035156" minWidth="10.0" prefWidth="200.9999877929688" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.6000061035156" minWidth="10.0" prefWidth="199.5999877929687" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="93.60001220703126" minHeight="10.0" prefHeight="51.000006103515624" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="176.79999771118165" minHeight="10.0" prefHeight="54.999993896484376" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="176.79999771118165" minHeight="10.0" prefHeight="51.00000610351563" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="176.79999771118165" minHeight="10.0" prefHeight="55.00001220703126" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="134.99999084472654" minHeight="10.0" prefHeight="52.59998779296876" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="134.99999084472654" minHeight="10.0" prefHeight="46.20001220703125" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Item Code :" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblReturnId" text="RETURN_0001" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Order ID :" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtOrderId" text="Order_" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Date :" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Return ID :">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Unit Price :" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Customer Name :" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Bought qty :" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Discount Rate :" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Return Qty :" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Order Total :" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Return Amount :" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtCustName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="txtOrderTotal" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="txtDescription" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtUnitPrice" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtDisRate" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="txtQty" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Description :" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Georgia" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtReturnQty" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <JFXComboBox fx:id="cmbItemCode" prefHeight="30.0" prefWidth="190.0" GridPane.columnIndex="4" />
+                     </children>
+                  </GridPane>
+                  <JFXTreeTableView fx:id="tblReturn" prefHeight="237.0" prefWidth="851.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <columns>
+                        <TreeTableColumn fx:id="colReturnId" prefWidth="75.0" text="Return ID" />
+                        <TreeTableColumn fx:id="colOrderId" prefWidth="99.19998168945312" text="Order ID" />
+                        <TreeTableColumn fx:id="colDate" prefWidth="112.00001525878906" text="Return Date" />
+                        <TreeTableColumn fx:id="colCostName" prefWidth="120.00006103515625" text="Customer Name" />
+                        <TreeTableColumn fx:id="colAmount" prefWidth="84.80007934570312" text="Amount" />
+                        <TreeTableColumn fx:id="colItemCode" prefWidth="107.19998168945312" text="Item Code" />
+                        <TreeTableColumn fx:id="colDesc" prefWidth="100.00006103515625" text="Description" />
+                        <TreeTableColumn fx:id="colUPrice" prefWidth="72.7999267578125" text="Unit Price" />
+                        <TreeTableColumn fx:id="colQty" prefWidth="76.800048828125" text="Return Qty" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4E3636;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <Label prefHeight="42.0" prefWidth="398.0" text="Sales Return Form" textFill="#f2e2e2" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Harrington" size="35.0" />
+                           </font>
+                        </Label>
+                     </center>
+                     <left>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="22.399991989135742" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.600004196167" minWidth="10.0" prefWidth="177.60000801086426" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXButton onAction="#btnBack" prefHeight="41.0" prefWidth="83.0" style="-fx-background-color: #fab1a0;" text="Back" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Century" size="19.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </left>
+                     <right>
+                        <Label fx:id="lblToday" text="DATE" textFill="#fff6f6" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Ink Free" size="20.0" />
+                           </font>
+                        </Label>
+                     </right>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="458.40001220703124" minWidth="10.0" prefWidth="458.40001220703124" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="173.99998779296874" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.4000244140625" minWidth="10.0" prefWidth="216.20001220703125" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton onAction="#btnPlaceReturn" prefHeight="46.0" prefWidth="166.0" style="-fx-background-color: #38ada9;" text="Place Return" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Century" size="19.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#btnCancel" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: #b8e994;" text="Cancel" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Century" size="19.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
